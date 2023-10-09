@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => res.render('login.pug'));
 app.post('/login', (req, res) => {
-    const { username, password } = req.body;
+    const { username, password } = req.body; //body에서 데이터 가져옴
     return res.send(`Username: ${username} / Password: ${password}`);
 });
 
