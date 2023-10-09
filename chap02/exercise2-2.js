@@ -11,9 +11,9 @@ const directorySearch = async diretory => {
 
     files.forEach(async file => {
         const filePath = path.join(directory, file); //파일 경로 문자열로 return
-        const stat = await fileStat(filePath);
+        const stat = await fileStat(filePath); //파일 정보 읽어오기
 
-        if (stat.isDirectory()) await directorySearch(filePath);
-        else if (path.extname(filePath) === '.js') console.log(filePath);
+        if (stat.isDirectory()) await directorySearch(filePath); //파일이 디렉토리인지 확인
+        else if (path.extname(filePath) === '.js') console.log(filePath); //파일이 디렉토리가 아니고 js파일이면 콘솔에 로깅
     });
 };
