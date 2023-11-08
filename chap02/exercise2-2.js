@@ -17,3 +17,11 @@ const directorySearch = async diretory => {
         else if (path.extname(filePath) === '.js') console.log(filePath); //파일이 디렉토리가 아니고 js파일이면 콘솔에 로깅
     });
 };
+
+(async () => {
+    try {
+        await searchDirectory(PATH);
+    } catch (err) {
+        console.error(err);
+    }
+})();
