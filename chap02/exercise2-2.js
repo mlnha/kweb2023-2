@@ -6,7 +6,7 @@ const dirList = util.promisify(fs.readdir); //디렉토리 목록 읽어오기
 const fileStat = util.promisify(fs.stat);  //디렉토리 정보 읽어오기
 const PATH = './test';
 
-const directorySearch = async diretory => {
+const directorySearch = async directory => {
     const files = await dirList(directory); // 디렉토리 내용 읽고 결과 -> 배열에 저장
 
     files.forEach(async file => {
@@ -20,7 +20,7 @@ const directorySearch = async diretory => {
 
 (async () => {
     try {
-        await searchDirectory(PATH);
+        await directorySearch(PATH);
     } catch (err) {
         console.error(err);
     }
