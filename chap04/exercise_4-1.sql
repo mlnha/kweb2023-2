@@ -1,5 +1,5 @@
 CREATE TABLE `students` (
-    `id` INT NOT NULL AUTO_INCREMENT.
+    `id` INT NOT NULL AUTO_INCREMENT,
     `name`VARCHAR(20) NOT NULL,
     `admission_year` INT NOT NULL,
     `major` VARCHAR(20) NOT NULL,
